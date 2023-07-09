@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>608831631131-iat8jqbm7b4vhi6ijuk1unovmkg6aook.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.608831631131-iat8jqbm7b4vhi6ijuk1unovmkg6aook</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAlkV1kwFYhW-189JeXqmMKu8X8fpgGRDU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>608831631131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.loginFiks2</string>
+	<key>PROJECT_ID</key>
+	<string>signin-bismillah</string>
+	<key>STORAGE_BUCKET</key>
+	<string>signin-bismillah.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:608831631131:ios:666aa2bcac0177ad08adbe</string>
+</dict>
+</plist>
