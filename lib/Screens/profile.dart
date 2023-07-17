@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login_fiks2/screens/sign_in.dart';
 import 'package:file_picker/file_picker.dart';
-import '../../pengalaman/pengalaman.dart';
+import '../pengalaman/pengalaman.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Profile extends StatefulWidget {
