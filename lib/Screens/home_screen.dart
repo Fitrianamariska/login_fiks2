@@ -113,22 +113,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     body: Center(
-  //       child: ElevatedButton(
-  //         child: Text("Logout"),
-  //         onPressed: () {
-  //           FirebaseAuth.instance.signOut().then((value) {
-  //             print("Signed Out");
-  //             Navigator.push(
-  //                 context, MaterialPageRoute(builder: (context) => SignIn()));
-  //           });
-  //           Navigator.push(
-  //               context, MaterialPageRoute(builder: (context) => SignIn()));
-  //         },
-  //       ),
-  //     ),
-  //   );
-  // }
 }

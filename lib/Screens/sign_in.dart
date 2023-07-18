@@ -5,8 +5,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:login_fiks2/screens/sign_up.dart';
-import 'package:login_fiks2/widget/widget.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
+
+import 'MyHomePage.dart';
 
 class SignIn extends StatefulWidget {
   //sigin homenya
