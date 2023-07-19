@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Halaman Preview/previewATS.dart';
+import 'Halaman Preview/previewKreatif.dart';
+
 class formatcvPage extends StatefulWidget {
   const formatcvPage({super.key});
 
@@ -48,11 +51,11 @@ class _formatcvPageState extends State<formatcvPage> {
                     backgroundColor: Color(0xFF090774),
                     minimumSize: Size(140, 38)),
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => previewkreatif(),
-                  //     ));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => previewATS(),
+                      ));
                 },
                 child: const Text("ATS Friendly"),
               ),

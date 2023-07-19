@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../HalamanCreate/createCV.dart';
+
 TextEditingController contJudulcv = TextEditingController();
 
 class createJudul extends StatefulWidget {
@@ -81,6 +83,7 @@ class _createJudulState extends State<createJudul> {
                   })
                       // ignore: avoid_print, invalid_return_type_for_catch_error
                       .catchError(
+                          // ignore: avoid_print, invalid_return_type_for_catch_error
                           (error) => print("Failed to add judulCV: $error"));
                 },
                 child: Text("Next"),
