@@ -140,27 +140,6 @@ class _editPengalamanState extends State<editPengalaman> {
                   labelText: 'Jabatan',
                 ),
               ),
-              SizedBox(height: 16.0),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 0, 11, 133),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => Report(docid: widget.docid),
-                    ),
-                  );
-                },
-                child: Text(
-                  "Make Report",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 251, 251, 251),
-                  ),
-                ),
-              ),
             ],
           ),
         ),
