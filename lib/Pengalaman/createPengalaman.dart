@@ -10,7 +10,7 @@ class CreatePengalaman extends StatefulWidget {
 
 class _CreatePengalamanState extends State<CreatePengalaman> {
   List<String> pengalamanList = [];
-  List<String> selectedPengalaman = []; // Added to track selected experiences
+  List<String> selectedPengalaman = [];
 
   @override
   void initState() {
@@ -57,16 +57,13 @@ class _CreatePengalamanState extends State<CreatePengalaman> {
                 itemBuilder: (context, index) {
                   String pengalaman = pengalamanList[index];
                   return CheckboxListTile(
-                    value: selectedPengalaman.contains(
-                        pengalaman), // Use the selectedPengalaman list to determine the checkbox value
+                    value: selectedPengalaman.contains(pengalaman),
                     onChanged: (newValue) {
                       setState(() {
                         if (newValue!) {
-                          selectedPengalaman.add(
-                              pengalaman); // Add the experience to selectedPengalaman list if it is checked
+                          selectedPengalaman.add(pengalaman);
                         } else {
-                          selectedPengalaman.remove(
-                              pengalaman); // Remove the experience from selectedPengalaman list if it is unchecked
+                          selectedPengalaman.remove(pengalaman);
                         }
                       });
                     },
@@ -76,15 +73,10 @@ class _CreatePengalamanState extends State<CreatePengalaman> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 120, bottom: 100),
+              padding: const EdgeInsets.only(left: 120, bottom: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  // Save the selected experiences to Firebase Firestore
-                  CollectionReference ref =
-                      FirebaseFirestore.instance.collection('pengalaman');
-                  for (String experience in selectedPengalaman) {
-                    ref.add({'pengalaman': experience});
-                  }
+                  _saveSelectedExperiences();
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFF090774),
@@ -92,9 +84,52 @@ class _CreatePengalamanState extends State<CreatePengalaman> {
                 child: Text('Simpan'),
               ),
             ),
+            if (selectedPengalaman.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(left: 120, bottom: 16),
+                child: ElevatedButton(
+                  onPressed: () {
+                    _deleteSelectedExperiences();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xFF090774),
+                  ),
+                  child: Text('Hapus yang Dipilih'),
+                ),
+              ),
           ],
         ),
       ),
     );
+  }
+
+  void _saveSelectedExperiences() {
+    // Save the selected experiences to Firebase Firestore
+    CollectionReference ref =
+        FirebaseFirestore.instance.collection('pengalaman');
+    for (String experience in selectedPengalaman) {
+      ref.add({'pengalaman': experience});
+    }
+    setState(() {
+      selectedPengalaman
+          .clear(); // Clear selected experiences after saving to Firestore
+    });
+  }
+
+  void _deleteSelectedExperiences() {
+    // Delete selected experiences from the list and Firestore
+    CollectionReference ref =
+        FirebaseFirestore.instance.collection('pengalaman');
+    for (String experience in selectedPengalaman) {
+      ref.where('pengalaman', isEqualTo: experience).get().then((snapshot) {
+        snapshot.docs.forEach((doc) {
+          doc.reference.delete();
+        });
+      });
+    }
+    setState(() {
+      selectedPengalaman
+          .clear(); // Clear selected experiences after deleting from Firestore
+    });
   }
 }
