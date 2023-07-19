@@ -8,23 +8,31 @@ class previewkreatif extends StatefulWidget {
 }
 
 class _previewkreatifState extends State<previewkreatif> {
-  int _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("PREVIEW KREATIF"),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(56.0),
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/background.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            AppBar(
+              backgroundColor: Colors.transparent,
+              title: Text('PREVIW KREATIF'),
+            ),
+          ],
         ),
       ),
-      
-     
+      body: Center(
+        child: Text('PREVIEW KREATIF'),
+      ),
     );
   }
 }
