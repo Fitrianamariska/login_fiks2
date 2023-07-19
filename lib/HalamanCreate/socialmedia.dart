@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_fiks2/halamanCreate/formatCV.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import '../Screens/formatCV.dart';
 
 class SocialMediaPage extends StatefulWidget {
   const SocialMediaPage({Key? key});

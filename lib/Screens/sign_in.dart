@@ -3,12 +3,10 @@
 
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:login_fiks2/screens/sign_up.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'MyHomePage.dart';
+import 'widget.dart';
 
 class SignIn extends StatefulWidget {
   //sigin homenya
@@ -97,20 +95,3 @@ class _SignInState extends State<SignIn> {
     );
   }
 }
-
-// Widget forgetPassword(BuildContext context) {
-//   return Container(
-//     width: MediaQuery.of(context).size.width,
-//     height: 35,
-//     alignment: Alignment.bottomRight,
-//     child: TextButton(
-//       child: const Text(
-//         "Forgot Password?",
-//         style: TextStyle(color: Colors.white70),
-//         textAlign: TextAlign.right,
-//       ),
-//       onPressed: () => Navigator.push(
-//           context, MaterialPageRoute(builder: (context) => ResetPassword())),
-//     ),
-//   );
-// }

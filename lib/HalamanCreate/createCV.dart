@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:login_fiks2/halamanCreate/createEducation.dart';
-import 'package:login_fiks2/halamanCreate/createLainnya.dart';
-import 'package:login_fiks2/halamanCreate/createPengalaman%20(1).dart';
 import 'package:login_fiks2/halamanCreate/socialmedia.dart';
 import 'package:login_fiks2/halamanCreate/tentangSaya.dart';
-import 'package:login_fiks2/widget/widget.dart';
+
+import '../Pengalaman/createPengalaman.dart';
+import '../Screens/MyHomePage.dart';
+import '../Screens/createLainnya.dart';
 
 class createCV extends StatefulWidget {
   final IconData icon;
