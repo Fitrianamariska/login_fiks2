@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../halamanCreate/createCV.dart';
+import '../HalamanCreate/createCV.dart';
 
 TextEditingController contJudulcv = TextEditingController();
 
