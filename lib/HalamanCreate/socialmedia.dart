@@ -16,7 +16,7 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
   TextEditingController twitterController = TextEditingController();
   List<TextEditingController> listController = [TextEditingController()];
 
-  CollectionReference ref = FirebaseFirestore.instance.collection('createCV');
+  CollectionReference ref = FirebaseFirestore.instance.collection('socialmedia');
 
   @override
   void dispose() {
