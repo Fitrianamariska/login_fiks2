@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:login_fiks2/Screens/sign_in.dart';
 
 //import 'package:login_fiks2/screens/sign_in.dart';
 import 'firebase_options.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home: SignIn(),
+      home: SignIn(),
       debugShowCheckedModeBanner: false,
     );
   }
