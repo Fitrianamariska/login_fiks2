@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../halamanCreate/createCV.dart';
-
 TextEditingController contJudulcv = TextEditingController();
 
 class createJudul extends StatefulWidget {
