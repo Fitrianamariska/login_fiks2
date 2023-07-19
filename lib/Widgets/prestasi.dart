@@ -142,14 +142,22 @@ class _PrestasiWidgetState extends State<PrestasiWidget> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          for (var i = 0;
-                              i < listControllerPrestasi.length;
-                              i++) {
+                          for (int i = 0; i < listControllerPrestasi.length; i++) {
                             ref.add({
                               'prestasi': listControllerPrestasi[i].text,
-                              'tahun': listControllerTahun[i].text,
+                              'tahun': listControllerTahun.length > i
+                                  ? listControllerTahun[i].text
+                                  : '',
                             });
                           }
+                          // for (var i = 0;
+                          //     i < listControllerPrestasi.length;
+                          //     i++) {
+                          //   ref.add({
+                          //     'prestasi': listControllerPrestasi[i].text,
+                          //     'tahun': listControllerTahun[i].text,
+                          //   });
+                          // }
                         },
                         style: ElevatedButton.styleFrom(
                           primary: Colors.blue[900], // Background color
